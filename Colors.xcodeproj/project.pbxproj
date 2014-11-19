@@ -14,6 +14,9 @@
 		EF72C85F1A1D0BB500E61118 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF72C85E1A1D0BB500E61118 /* Images.xcassets */; };
 		EF72C8621A1D0BB500E61118 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF72C8601A1D0BB500E61118 /* LaunchScreen.xib */; };
 		EF72C86E1A1D0BB500E61118 /* ColorsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF72C86D1A1D0BB500E61118 /* ColorsTests.m */; };
+		EF72C8791A1D0D1100E61118 /* ColorsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF72C8781A1D0D1100E61118 /* ColorsCollectionViewController.m */; };
+		EF72C87E1A1D150C00E61118 /* Colors.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF72C87D1A1D150C00E61118 /* Colors.plist */; };
+		EF72C8811A1D155D00E61118 /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = EF72C8801A1D155D00E61118 /* UIColor+HexString.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,11 @@
 		EF72C8671A1D0BB500E61118 /* ColorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF72C86C1A1D0BB500E61118 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF72C86D1A1D0BB500E61118 /* ColorsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorsTests.m; sourceTree = "<group>"; };
+		EF72C8771A1D0D1100E61118 /* ColorsCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorsCollectionViewController.h; sourceTree = "<group>"; };
+		EF72C8781A1D0D1100E61118 /* ColorsCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorsCollectionViewController.m; sourceTree = "<group>"; };
+		EF72C87D1A1D150C00E61118 /* Colors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Colors.plist; sourceTree = "<group>"; };
+		EF72C87F1A1D155D00E61118 /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexString.h"; sourceTree = "<group>"; };
+		EF72C8801A1D155D00E61118 /* UIColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexString.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,10 +93,15 @@
 				EF72C8561A1D0BB500E61118 /* AppDelegate.m */,
 				EF72C8581A1D0BB500E61118 /* ViewController.h */,
 				EF72C8591A1D0BB500E61118 /* ViewController.m */,
+				EF72C8771A1D0D1100E61118 /* ColorsCollectionViewController.h */,
+				EF72C8781A1D0D1100E61118 /* ColorsCollectionViewController.m */,
 				EF72C85B1A1D0BB500E61118 /* Main.storyboard */,
 				EF72C85E1A1D0BB500E61118 /* Images.xcassets */,
 				EF72C8601A1D0BB500E61118 /* LaunchScreen.xib */,
 				EF72C8511A1D0BB500E61118 /* Supporting Files */,
+				EF72C87D1A1D150C00E61118 /* Colors.plist */,
+				EF72C87F1A1D155D00E61118 /* UIColor+HexString.h */,
+				EF72C8801A1D155D00E61118 /* UIColor+HexString.m */,
 			);
 			path = Colors;
 			sourceTree = "<group>";
@@ -199,6 +212,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF72C87E1A1D150C00E61118 /* Colors.plist in Resources */,
 				EF72C85D1A1D0BB500E61118 /* Main.storyboard in Resources */,
 				EF72C8621A1D0BB500E61118 /* LaunchScreen.xib in Resources */,
 				EF72C85F1A1D0BB500E61118 /* Images.xcassets in Resources */,
@@ -219,6 +233,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF72C8811A1D155D00E61118 /* UIColor+HexString.m in Sources */,
+				EF72C8791A1D0D1100E61118 /* ColorsCollectionViewController.m in Sources */,
 				EF72C85A1A1D0BB500E61118 /* ViewController.m in Sources */,
 				EF72C8571A1D0BB500E61118 /* AppDelegate.m in Sources */,
 				EF72C8541A1D0BB500E61118 /* main.m in Sources */,
