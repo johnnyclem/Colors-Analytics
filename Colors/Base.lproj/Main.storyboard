@@ -17,8 +17,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSW-sf-eQM">
-                                <rect key="frame" x="88" y="530" width="145" height="30"/>
-                                <state key="normal" title="Choose Color">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <state key="normal" title="Tap Anywhere To Change Color">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -36,7 +36,6 @@
                     </view>
                     <connections>
                         <outlet property="colorNameLabel" destination="Jca-ew-Lc8" id="tpO-05-wTH"/>
-                        <outlet property="selectColorbutton" destination="eSW-sf-eQM" id="V8t-ad-ap3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

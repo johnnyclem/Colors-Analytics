@@ -7,11 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "TAGDataLayer.h"
+#import "TAGManager.h"
 
 @interface ViewController ()
 
 @property (nonatomic, weak) IBOutlet UILabel *colorNameLabel;
-@property (nonatomic, weak) IBOutlet UIButton *selectColorbutton;
 
 @end
 
@@ -24,8 +25,19 @@
         UIColor *selectedColor = [note userInfo][@"color"];
         self.view.backgroundColor = selectedColor;
         self.colorNameLabel.text = selectedColor.accessibilityLabel;
-        [self.selectColorbutton setTitle:@"Replace Color" forState:UIControlStateApplication];
+        
+        TAGDataLayer *dataLayer = [[TAGManager instance] dataLayer];
+        NSDictionary *event = @{ @"event": @"color-new-selection"};
+        [dataLayer push:event];
     }];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    TAGDataLayer *dataLayer = [[TAGManager instance] dataLayer];
+    NSDictionary *event = @{ @"event": @"screen", @"screen-name": @"Home Screen"};
+    [dataLayer push:event];
 }
 
 - (void)didReceiveMemoryWarning {

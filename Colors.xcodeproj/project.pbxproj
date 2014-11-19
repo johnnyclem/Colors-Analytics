@@ -17,6 +17,12 @@
 		EF72C8791A1D0D1100E61118 /* ColorsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF72C8781A1D0D1100E61118 /* ColorsCollectionViewController.m */; };
 		EF72C87E1A1D150C00E61118 /* Colors.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF72C87D1A1D150C00E61118 /* Colors.plist */; };
 		EF72C8811A1D155D00E61118 /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = EF72C8801A1D155D00E61118 /* UIColor+HexString.m */; };
+		EF72C8831A1D17AC00E61118 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF72C8821A1D17AC00E61118 /* libGoogleAnalyticsServices.a */; };
+		EF72C88A1A1D17CC00E61118 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF72C8891A1D17CC00E61118 /* CoreData.framework */; };
+		EF72C88C1A1D17D100E61118 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EF72C88B1A1D17D100E61118 /* libsqlite3.dylib */; };
+		EF72C88E1A1D17D500E61118 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF72C88D1A1D17D500E61118 /* SystemConfiguration.framework */; };
+		EF72C8901A1D17DD00E61118 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EF72C88F1A1D17DD00E61118 /* libz.dylib */; };
+		EF72C8941A1D1C1600E61118 /* GTM-KDBSS3 in Resources */ = {isa = PBXBuildFile; fileRef = EF72C8931A1D1C1600E61118 /* GTM-KDBSS3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +54,17 @@
 		EF72C87D1A1D150C00E61118 /* Colors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Colors.plist; sourceTree = "<group>"; };
 		EF72C87F1A1D155D00E61118 /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexString.h"; sourceTree = "<group>"; };
 		EF72C8801A1D155D00E61118 /* UIColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexString.m"; sourceTree = "<group>"; };
+		EF72C8821A1D17AC00E61118 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
+		EF72C8841A1D17B500E61118 /* TAGContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGContainer.h; sourceTree = "<group>"; };
+		EF72C8851A1D17B500E61118 /* TAGContainerOpener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGContainerOpener.h; sourceTree = "<group>"; };
+		EF72C8861A1D17B500E61118 /* TAGDataLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGDataLayer.h; sourceTree = "<group>"; };
+		EF72C8871A1D17B500E61118 /* TAGLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGLogger.h; sourceTree = "<group>"; };
+		EF72C8881A1D17B500E61118 /* TAGManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGManager.h; sourceTree = "<group>"; };
+		EF72C8891A1D17CC00E61118 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		EF72C88B1A1D17D100E61118 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		EF72C88D1A1D17D500E61118 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		EF72C88F1A1D17DD00E61118 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		EF72C8931A1D1C1600E61118 /* GTM-KDBSS3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GTM-KDBSS3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +72,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF72C8901A1D17DD00E61118 /* libz.dylib in Frameworks */,
+				EF72C88E1A1D17D500E61118 /* SystemConfiguration.framework in Frameworks */,
+				EF72C88C1A1D17D100E61118 /* libsqlite3.dylib in Frameworks */,
+				EF72C88A1A1D17CC00E61118 /* CoreData.framework in Frameworks */,
+				EF72C8831A1D17AC00E61118 /* libGoogleAnalyticsServices.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +131,17 @@
 		EF72C8511A1D0BB500E61118 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EF72C8931A1D1C1600E61118 /* GTM-KDBSS3 */,
+				EF72C88F1A1D17DD00E61118 /* libz.dylib */,
+				EF72C88D1A1D17D500E61118 /* SystemConfiguration.framework */,
+				EF72C88B1A1D17D100E61118 /* libsqlite3.dylib */,
+				EF72C8891A1D17CC00E61118 /* CoreData.framework */,
+				EF72C8841A1D17B500E61118 /* TAGContainer.h */,
+				EF72C8851A1D17B500E61118 /* TAGContainerOpener.h */,
+				EF72C8861A1D17B500E61118 /* TAGDataLayer.h */,
+				EF72C8871A1D17B500E61118 /* TAGLogger.h */,
+				EF72C8881A1D17B500E61118 /* TAGManager.h */,
+				EF72C8821A1D17AC00E61118 /* libGoogleAnalyticsServices.a */,
 				EF72C8521A1D0BB500E61118 /* Info.plist */,
 				EF72C8531A1D0BB500E61118 /* main.m */,
 			);
@@ -216,6 +249,7 @@
 				EF72C85D1A1D0BB500E61118 /* Main.storyboard in Resources */,
 				EF72C8621A1D0BB500E61118 /* LaunchScreen.xib in Resources */,
 				EF72C85F1A1D0BB500E61118 /* Images.xcassets in Resources */,
+				EF72C8941A1D1C1600E61118 /* GTM-KDBSS3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +397,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Colors/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Colors",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -373,6 +411,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Colors/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Colors",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

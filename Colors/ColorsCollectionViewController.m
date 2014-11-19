@@ -8,6 +8,8 @@
 
 #import "ColorsCollectionViewController.h"
 #import "UIColor+HexString.h"
+#import "TAGManager.h"
+#import "TAGDataLayer.h"
 
 @interface ColorsCollectionViewController () <UIAlertViewDelegate>
 
@@ -20,6 +22,13 @@
 
 static NSString * const reuseIdentifier = @"ColorCell";
 static NSString * const headerIdentifier = @"ColorsHeader";
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    TAGDataLayer *dataLayer = [[TAGManager instance] dataLayer];
+    NSDictionary *event = @{ @"event": @"screen", @"screen-name": @"Color Selection"};
+    [dataLayer push:event];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -67,25 +76,26 @@ static NSString * const headerIdentifier = @"ColorsHeader";
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     _selectedColor = _colors[indexPath.row];
+    [[[TAGManager instance] dataLayer] push:@{@"selected-color" : _selectedColor.accessibilityLabel}];
     NSLog(@"Selected %@", _selectedColor);
     
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Keep This Color?" message:nil preferredStyle:UIAlertControllerStyleAlert];
-    
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
-        
-    }];
-    UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"Confirm" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+//    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Keep This Color?" message:nil preferredStyle:UIAlertControllerStyleAlert];
+//    
+//    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+//        
+//    }];
+//    UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"Confirm" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         [[NSNotificationCenter defaultCenter] postNotificationName:@"NewColorSelected" object:nil userInfo:@{@"color": _selectedColor}];
         [self dismissViewControllerAnimated:YES completion:nil];
-    }];
-    
-    [alert addAction:cancelAction];
-    [alert addAction:confirmAction];
-    UIView *colorView = [[UIView alloc] initWithFrame:CGRectMake(alert.view.frame.size.width - 160.0, 10.0, 36.0, 36.0)];
-    colorView.backgroundColor = _selectedColor;
-    [alert.view addSubview:colorView];
-
-    [self presentViewController:alert animated:YES completion:nil];
+//    }];
+//    
+//    [alert addAction:cancelAction];
+//    [alert addAction:confirmAction];
+//    UIView *colorView = [[UIView alloc] initWithFrame:CGRectMake(alert.view.frame.size.width - 160.0, 10.0, 36.0, 36.0)];
+//    colorView.backgroundColor = _selectedColor;
+//    [alert.view addSubview:colorView];
+//
+//    [self presentViewController:alert animated:YES completion:nil];
 
 }
 

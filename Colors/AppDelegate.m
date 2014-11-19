@@ -7,8 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "TAGManager.h"
+#import "TAGContainer.h"
+#import "TAGContainerOpener.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <TAGContainerOpenerNotifier>
 
 @end
 
@@ -16,8 +19,36 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    _tagManager = [TAGManager instance];
+    
+    // Optional: Change the LogLevel to Verbose to enable logging at VERBOSE and higher levels.
+    [_tagManager.logger setLogLevel:kTAGLoggerLogLevelVerbose];
+
+    // Optional: Change the default Dispatch Interval to debug/test hits in real-time.
+    [_tagManager setDispatchInterval:1.0];
+
+    /*
+     * Opens a container.
+     *
+     * @param containerId The ID of the container to load.
+     * @param tagManager The TAGManager instance for getting the container.
+     * @param openType The choice of how to open the container.
+     * @param timeout The timeout period (default is 2.0 seconds).
+     * @param notifier The notifier to inform on container load events.
+     */
+    [TAGContainerOpener openContainerWithId:@"GTM-KDBSS3"   // Update with your Container ID.
+                                 tagManager:_tagManager
+                                   openType:kTAGOpenTypePreferFresh
+                                    timeout:nil
+                                   notifier:self];
+    
+    
     return YES;
+}
+
+- (void)containerAvailable:(TAGContainer *)container {
+    _container = container;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
